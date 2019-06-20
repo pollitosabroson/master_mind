@@ -53,3 +53,15 @@ while can_play:
                 )
             )
         can_play = False
+
+    # Validate if there are still attempts
+    if attempts >= 1 and attempts < max_attempts and len(correct_color) != max_chips:
+        print ("New attempt: ")
+    elif attempts >= max_attempts:
+        print (
+            'You have not reached it in a maximum of {max_attempts} attempts, '
+            'the color code is {random_choise}'.format(
+                max_attempts=max_attempts,
+                random_choise=random_choise
+            )
+        )
