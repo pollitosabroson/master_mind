@@ -42,3 +42,14 @@ while can_play:
             guessed_color=', '.join(guessed_color)
         )
     )
+    # Validate if the values ​​are correct
+    if len(correct_color) == max_chips:
+        if attempts == 1:
+            print ("Wow! On the first try!")
+        else:
+            print (
+                "Excellent you have achieved in {attempts} attempts".format(
+                    attempts=attempts
+                )
+            )
+        can_play = False
