@@ -65,3 +65,4 @@ while can_play:
                 random_choise=random_choise
             )
         )
+        game = False
