@@ -1,0 +1,9 @@
+version: '3'
+services:
+  # python
+  python:
+    container_name: python_master_mind
+    build: python/
+    volumes:
+      - ../../game/:/app
+    tty: true
