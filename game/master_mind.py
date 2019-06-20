@@ -25,4 +25,20 @@ while can_play:
     if len(random_choise) != len(inpunt_value):
         print('Only four values ​​can be added')
         continue
-
+    # Iterarion total option
+    for i in range(len(random_choise)):
+        if inpunt_value[i] == random_choise[i]:
+            correct_color.append('black')
+        if inpunt_value[i] != random_choise[i] and inpunt_value[i] in random_choise:
+            guessed_color.append('white')
+    print(
+        'Correct values: {correct_color}'.format(
+            correct_color=', '.join(correct_color)
+        )
+    )
+    print(
+        "values ​​that exist, but are not in their right "
+        "place: {guessed_color}".format(
+            guessed_color=', '.join(guessed_color)
+        )
+    )
